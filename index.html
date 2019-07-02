@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Room</title>
+    <style>
+        .counter-style {
+            font-weight: bold;
+            font-size: 18pt
+        }
+
+        #errorMessage {
+            font-size: 25px;
+            font-family: cursive;
+            color: red;
+            animation: blink 1s linear infinite;
+        }
+
+        @keyframes blink {
+            0% {opacity: 0;}
+            50% {opacity: .5;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+
+<body style="text-align: center; padding: 20px">
+    <div class="container">
+        <div class="sections" style="margin-bottom: 15px">
+            <label style="text-transform: uppercase">Select bed type : </label>
+            <select id="patientType" class="patientType" style="padding: 5px">
+                <option value="heart_attack_patient">Heart Attack Patient</option>
+                <option value="trauma_patient">Trauma Patient</option>
+            </select>
+        </div>
+        <button class="btn-add-patient" style="margin-left:82px; padding: 10px">Book Bed</button>
+    </div>
+    <div class="patients">
+        <ul class="bed-details" style="list-style: none">
+            <li style="margin-bottom: 10px"><span style="color: green">Total Heart Attack Bed Booked : </span><span
+                    id="heartPatientCount" class="counter-style">0</span></li>
+            <li><span style="color: tomato">Total Trauma Patient Bed Booked : </span><span id="traumaPatientCount"
+                    class="counter-style">0</span>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <span id="errorMessage" style="color: red"></span>
+    </div>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+
+</html>
